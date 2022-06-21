@@ -2,44 +2,214 @@
 <head> 
 <title>Google</title> 
 <style>
+*
+{
+  box-sizing: border-box;
+  font-family: 'Arial'
+}
 body
 {
-    background-color:rgba(0,0,0,0.3);
+    background-color:#202124;
+    
 }
-nav{
+nav
+{
     display:flex;
-    justify-content:flex-end;
+    justify-content:end;
+    
+    height: 50px;
+    color: white;
+    font-family: 'Arial';
+    font-size: 13px;
 }
- main 
- { 
+.right-nav
+{
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-around;
+  width: 210px;
+}
+.right-nav a
+{
+  color: white;
+  text-decoration: none;
+}
+.right-nav a:hover
+{
+  text-decoration: underline;
+}
+
+.right-nav .all-apps-container
+{
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right-nav .all-apps-container:hover
+{
+  background-color: rgba(61, 61, 61, 0.5);
+}
+
+#profile-pic img
+{
+  height: 32px;
+  width: 32px;
+  border-radius: 20px;
+}
+
+ main 
+ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin: 10px 0px 0px 0px;
+ }
+.banner,#search-bar-div,.buttons-div
+ {
+   margin: 20px 0px;
+ }
+ main #search-bar-div
+{
+  display: flex;
+  border: 1px solid #838383;
+  border-radius: 50px;
+  padding: 5px 10px;
+  height: 45px;
+  width: 570px;
+}
+#search-icon,#search-clear
+{
+  width: 20px;
+}
+#search-bar
+{
+  margin: 0px 5px;
+  color: white;
+  font-size: 15px;
+  background-color: transparent;
+  border: none;
+  flex: 1;
+}
+
+#search-clear
+{
+  /* display: none; */
+}
+
+#search-bar:focus
+{
+  outline: none;
+}
+.buttons-div button
+{
+  color: #e8eaed;
+  background-color: #303134;
+  border-radius: 4px;
+  border: none;
+  height: 30px;
+  padding: 0px 13px;
+  margin: 10px;
+
+}
+.buttons-div button:hover
+{
+  border: 1px solid #838383;
+}
+
+main .lang-div
+{
+  color: #a2a8af;
+  font-size: 13px;
+}
+main .lang-div a
+{
+  color: #8ab4f8;
+  font-size: 13px;
+  margin: 5px;
+}
+
+ footer
+ {
+  font-size: 15px;
+   color: #9aa0a6;
+   background-color: rgba(17, 17, 17, 0.712);
+
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   left: 0;
  }
  
+ footer #country
+ {
+   padding: 15px 30px;
+   border-bottom: 1px solid #9aa0a623;
+ }
+
+ footer a
+ {
+   font-size: 15px;
+   color: #9aa0a6;
+   text-decoration: none;
+ }
+ footer a:hover
+ {
+   text-decoration: underline;
+ }
+ footer .footer-links
+ {
+   height: 46px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0px 35px;
+ }
+ .footer-links a
+ {
+   font-size: 14px;
+ }
+ .footer-links .footer-links-1
+ {
+   display: flex;
+   justify-content: space-between;
+   width: 370px;
+ }
+ .footer-links .footer-links-2
+ {
+   display: flex;
+   justify-content: space-between;
+   width: 195px;
+ }
  </style>
  </head>
  <body> 
  <nav>
-   	<a>Gmail</a>
-   	<a>Images</a>
-   	<div>
-   	  <img src="res/">
-   	</div>
-   	<div id="profile-pic">
-   	  <img src="res/">
-   	</div>
- <nav> 
+   	<div class="right-nav">
+      <a href="https://www.gmail.com">Gmail</a>
+      <a href="https://www.google.co.in/imghp?hl=en&ogbl">Images</a>
+      <div class="all-apps-container">
+        <img src="res/svgexport-1.svg">
+      </div>
+      <div id="profile-pic">
+        <img src="res/iamdifferent_channel.jpg">
+      </div>
+     </div>
+  </nav> 
  <main>
-   <img src="res/" class="banner">
+   <img src="res/googlelogo.png" class="banner">
    <div id="search-bar-div">
-       <img id="search-icon">
+       <img id="search-icon" src="res/svgexport-2.svg">
        <input type="text" id="search-bar">
-       <img id="search-icon">
+       <img id="search-clear" src="res/svgexport-3.svg">
    </div>
    <div class="buttons-div">
-     <button id="search-button">google search</button>
-     <button id="lucky-button">I m feeling lucky</button>
+     <button id="search-button">Google Search</button>
+     <button id="lucky-button">I'm Feeling Lucky</button>
    </div>
    <div class="lang-div">
      Google offered in: 
@@ -50,73 +220,45 @@ nav{
      <a>தமிழ்</a>
      <a>ગુજરાતી</a>
      <a>ಕನ್ನಡ</a>
-     <html>
-<head> 
-<title>Google</title> 
-<style>
- main 
- { 
-  display: flex;
-  justify-content: center;
-  align-items: center;
- } 
- </style>
- </head>
- <body> 
- <nav>
-   	<a>Gmail</a>
-   	<a>Images</a>
-   	<div>
-   	  <img src="res/">
-   	</div>
-   	<div id="profile-pic">
-   	  <img src="res/">
-   	</div>
- <nav> 
- <main>
-   <img src="res/" class="banner">
-   <div id="search-bar-div">
-       <img id="search-icon">
-       <input type="text" id="search-bar">
-       <img id="search-icon">
-   </div>
-   <div class="buttons-div">
-     <button id="search-button">google search</button>
-     <button id="lucky-button">I m feeling lucky</button>
-   </div>
-   <div class="lang-div">
-     Google offered in: 
-     <a>हिन्दी</a> 
-     <a>বাংলা</a>
-     <a>తెలుగు</a>
-     <a>मराठी</a>
-     <a>தமிழ்</a>
-     <a>ગુજરાતી</a>
-     <a>ಕನ್ನಡ</a>
-     <a>മലയാളം</a>
-     <a>ਪੰਜਾਬੀ</a>
-   </div>
- </main>
+     </div>
+  </main>
+
  
- <footer></footer>
- </body></html>മലയാളം ਪੰਜਾਬੀ
-   </div>
- </main> 
- <footer>
- <p>India</p>
- <hr class="gray-line">
- <div class="footer-links">
-    <div class="footer-links-1">
-      <a>About</a>
-      <a>Advertising</a>
-      <a>Business</a>
-      <a>How Search works</a>
-    </div>
-    <div class="footer-links-2">
-      <a>Privacy</a>
-      <a>Terms</a>
-      <a>Settings</a>
-    </div>
- </div>
- </footer>
- </body></html>
+  
+  <footer>
+  <div id="country">India</div>
+  <div class="footer-links">
+      <div class="footer-links-1">
+        <a>About</a>
+        <a>Advertising</a>
+        <a>Business</a>
+        <a>How Search works</a>
+      </div>
+      <div class="footer-links-2">
+        <a>Privacy</a>
+        <a>Terms</a>
+        <a>Settings</a>
+      </div>
+  </div>
+  </footer>
+
+ </body>
+ <script>
+  document.getElementById("search-button").onclick = function(){
+    let q = document.getElementById("search-bar").value;
+    if(q!="")
+    location.href="https://www.google.com/search?q="+q;
+  }
+  document.getElementById("search-clear").onclick = function(){
+    document.getElementById("search-bar").value=null;
+  }
+// i left here
+  // document.getElementById("search-bar").onclick=function(){
+   
+  //   document.getElementById("search-clear").style= "display:inline-block";
+  // };
+  // document.getElementById("search-bar").onabort=function(){
+  //   document.getElementById("search-clear").style="display:none";
+  // };
+</script>
+ </html>
