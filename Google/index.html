@@ -52,7 +52,7 @@ nav
 {
   background-color: rgba(61, 61, 61, 0.5);
 }
-#profile-pic
+.profile-pic-container
 {
   border-radius: 50px;
   height: 40px;
@@ -61,14 +61,14 @@ nav
   justify-content: center;
   align-items: center;
 }
-#profile-pic img
+.profile-pic
 {
   height: 32px;
   width: 32px;
   border-radius: 20px;
 
 }
-#profile-pic:hover
+.profile-pic-container:hover
 {
   cursor:pointer;
   background-color: #6b6b6b;
@@ -82,6 +82,15 @@ nav
   justify-content: center;
 
   margin: 10px 0px 0px 0px;
+ }
+ .profile-pic-container
+ {
+   position: relative;
+ }
+ /* i left here 1 */
+ .profile-pic-container:hover .manage-account
+ {
+   display: flex;
  }
  .manage-account
  {
@@ -101,8 +110,7 @@ nav
    position: absolute;
    right: 20px;
    top:60px;
-
-   display: none;
+display: none;
  }
  .big-profile-pic-container
  {
@@ -323,31 +331,32 @@ main .lang-div a
       <div class="all-apps-container">
         <img src="res/svgexport-1.svg">
       </div>
-      <div id="profile-pic">
-        <img src="res/iamdifferent_channel.jpg"> 
+      <div class="profile-pic-container">
+        <img class="profile-pic" src="res/iamdifferent_channel.jpg"> 
+        <div class="manage-account">
+          <div class="big-profile-pic-container">
+           <img class="big-profile-pic" src="res/iamdifferent_channel.jpg">
+           <img class="cam-icon" src="res/camera.png">
+          </div>
+           <p class="username">Android pc</p>
+           <p class="mail">iamdifferent369@gmail.com</p>
+           <button class="manage-button">Manage your Google Account</button>
+           <div class="add-account">
+             <img src="res/svgexport-2.svg" alt="">
+             <span>Add another Account</span>
+            </div>
+            <button class="logout-btn">Sign Out</button>
+            <div class="frame-footer">
+              <a href="">Privacy Policy</a>
+            <span>•</span> 
+            <a href="">Terms of Service</a>
+            </div>
+        </div>
       </div>
      </div>
   </nav> 
  <main>
-  <div class="manage-account">
-    <div class="big-profile-pic-container">
-     <img class="big-profile-pic" src="res/iamdifferent_channel.jpg">
-     <img class="cam-icon" src="res/camera.png">
-    </div>
-     <p class="username">Android pc</p>
-     <p class="mail">iamdifferent369@gmail.com</p>
-     <button class="manage-button">Manage your Google Account</button>
-     <div class="add-account">
-       <img src="res/svgexport-2.svg" alt="">
-       <span>Add another Account</span>
-      </div>
-      <button class="logout-btn">Sign Out</button>
-      <div class="frame-footer">
-        <a href="">Privacy Policy</a>
-      <span>•</span> 
-      <a href="">Terms of Service</a>
-      </div>
-  </div>
+  
    <img src="res/googlelogo.png" class="banner">
    <div id="search-bar-div">
        <img id="search-icon" src="res/svgexport-2.svg">
@@ -399,9 +408,6 @@ main .lang-div a
   document.getElementById("search-clear").onclick = function(){
     document.getElementById("search-bar").value=null;
   }
-  document.getElementById("profile-pic").onclick=function(){
-    document.getElementsByClassName("manage-account")[0].style="display:flex";
-  };
   
 
 // i left here
