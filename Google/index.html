@@ -52,12 +52,26 @@ nav
 {
   background-color: rgba(61, 61, 61, 0.5);
 }
-
+#profile-pic
+{
+  border-radius: 50px;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #profile-pic img
 {
   height: 32px;
   width: 32px;
   border-radius: 20px;
+
+}
+#profile-pic:hover
+{
+  cursor:pointer;
+  background-color: #6b6b6b;
 }
 
  main 
@@ -69,6 +83,120 @@ nav
 
   margin: 10px 0px 0px 0px;
  }
+ .manage-account
+ {
+   background-color: #292929;
+   border: 1px solid #303134;
+   color: #e8eaed;
+   border-radius: 5px;
+   box-shadow: 0px 0px 5px #6b6b6b;
+   padding: 15px 0px;
+   width: 360px;
+   height: 420px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+   position: absolute;
+   right: 20px;
+   top:60px;
+
+   display: none;
+ }
+ .big-profile-pic-container
+ {
+   width: 90px;
+   position: relative;
+   
+ }
+ .big-profile-pic
+ {
+   border-radius: 50px;
+   width: 80px;
+ }
+ .cam-icon
+ {
+   width: 25px;
+   position: absolute;
+   bottom: 5px;
+   right: -10px;
+ }
+.manage-account .username
+{
+  margin:20px 0px 2px 0px;
+  font-size: 16px;
+}
+
+.manage-account .mail
+{
+  margin:0px 0px 15px 0px;
+  font-size: 15px;
+}
+.manage-button
+{
+  background-color: transparent;
+   color: #eeeeee;
+   border: 1px solid #6b6b6b;
+   border-radius: 25px;
+   padding: 10px 20px;
+   margin-bottom: 15px;
+
+   font-weight: bold;
+   font-size: 13px;
+}
+.manage-button:hover
+{
+  background-color: #66666669;
+}
+.add-account
+{
+   height: 50px;
+   width: 100%;
+   border-bottom: 1px solid #6b6b6b;
+   border-top: 1px solid #6b6b6b;
+   padding-left: 70px;
+   display: flex;
+   align-items: center;
+   margin-bottom: 20px;
+}
+.add-account span
+{
+    color: #eeeeee;
+    font-weight: 700;
+    margin-left: 10px;
+    font-size: 14px;
+}
+.add-account:hover,.logout-btn:hover
+{
+  background-color: #66666642;
+}
+.logout-btn
+{
+  background-color: transparent;
+  color: #eeeeee;
+  font-weight: 700;
+  font-size: 13px;
+
+  padding: 10px 25px;
+  margin-bottom: 25px;
+  border: 1px solid #8b8b8b;
+  border-radius: 10px;
+}
+.frame-footer a
+{
+  color: #9aa0a6;
+  border-radius: 5px;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 0px 10px;
+  padding: 5px;
+}
+.frame-footer a:hover
+{
+  background-color:#66666642;
+}
+
 .banner,#search-bar-div,.buttons-div
  {
    margin: 20px 0px;
@@ -196,11 +324,30 @@ main .lang-div a
         <img src="res/svgexport-1.svg">
       </div>
       <div id="profile-pic">
-        <img src="res/iamdifferent_channel.jpg">
+        <img src="res/iamdifferent_channel.jpg"> 
       </div>
      </div>
   </nav> 
  <main>
+  <div class="manage-account">
+    <div class="big-profile-pic-container">
+     <img class="big-profile-pic" src="res/iamdifferent_channel.jpg">
+     <img class="cam-icon" src="res/camera.png">
+    </div>
+     <p class="username">Android pc</p>
+     <p class="mail">iamdifferent369@gmail.com</p>
+     <button class="manage-button">Manage your Google Account</button>
+     <div class="add-account">
+       <img src="res/svgexport-2.svg" alt="">
+       <span>Add another Account</span>
+      </div>
+      <button class="logout-btn">Sign Out</button>
+      <div class="frame-footer">
+        <a href="">Privacy Policy</a>
+      <span>•</span> 
+      <a href="">Terms of Service</a>
+      </div>
+  </div>
    <img src="res/googlelogo.png" class="banner">
    <div id="search-bar-div">
        <img id="search-icon" src="res/svgexport-2.svg">
@@ -252,6 +399,11 @@ main .lang-div a
   document.getElementById("search-clear").onclick = function(){
     document.getElementById("search-bar").value=null;
   }
+  document.getElementById("profile-pic").onclick=function(){
+    document.getElementsByClassName("manage-account")[0].style="display:flex";
+  };
+  
+
 // i left here
   // document.getElementById("search-bar").onclick=function(){
    
