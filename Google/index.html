@@ -46,10 +46,16 @@ nav
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 .right-nav .all-apps-container:hover
 {
   background-color: rgba(61, 61, 61, 0.5);
+}
+.all-apps-btn
+{
+  background-color: transparent;
+  border: none;
 }
 .profile-pic-container
 {
@@ -59,6 +65,11 @@ nav
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.profile-pic-btn
+{
+  background-color: transparent;
+  border: none;
 }
 .profile-pic
 {
@@ -86,11 +97,7 @@ nav
  {
    position: relative;
  }
- /* i left here 1 */
- .profile-pic-container:hover .manage-account
- {
-   display: flex;
- }
+
  .manage-account
  {
    background-color: #292929;
@@ -109,7 +116,11 @@ nav
    position: absolute;
    right: 20px;
    top:60px;
-display: none;
+   display: none;
+ }
+ .profile-pic-btn:focus+.manage-account
+ {
+   display: flex;
  }
  .big-profile-pic-container
  {
@@ -190,6 +201,63 @@ display: none;
   border: 1px solid #8b8b8b;
   border-radius: 10px;
 }
+
+.all-apps-exp
+{
+  height: 500px;
+  width: 300px;
+  padding: 10px;
+  background-color: #292929;
+   border: 1px solid #303134;
+   color: #e8eaed;
+   border-radius: 5px;
+   box-shadow: 0px 0px 5px #6b6b6b;
+  
+  position: absolute;
+  right: -50px;
+  top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  overflow-y: scroll;
+  display: none;
+}
+.all-apps-btn:focus+.all-apps-exp
+{
+  display: grid;
+}
+.all-apps-exp .apps
+{
+  height: 90px;
+  width: 90px;
+  margin: 7px 3px;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.all-apps-exp a:hover{
+  text-decoration: none;
+}
+.apps img
+{
+  width: 40px;
+}
+.apps p{
+  margin: 5px 0 0 0;
+  font-size: 15px;
+}
+.apps:hover
+{
+  background-color: #1d1d1d;
+}
+.all-apps-btn:focus+.all-apps-exp
+{
+  display: grid;
+}
+
 .frame-footer a
 {
   color: #9aa0a6;
@@ -238,14 +306,14 @@ display: none;
   flex: 1;
 }
 
-#search-clear
+/* #search-clear
 {
   display: none;
 }
 #search-bar:focus + #search-clear
 {
   display: inline-block;
-}
+} */
 #search-bar:focus
 {
   outline: none;
@@ -345,10 +413,142 @@ main .lang-div a
       <a href="https://www.gmail.com">Gmail</a>
       <a href="https://www.google.co.in/imghp?hl=en&ogbl">Images</a>
       <div class="all-apps-container">
-        <img src="res/svgexport-1.svg">
+        <button class="all-apps-btn">
+          <img src="res/svgexport-1.svg">
+        </button>
+        <div class="all-apps-exp">
+          <a href="#">
+            <div class="apps">
+              <img src="res/iamdifferent_channel.jpg" alt="">
+              <p>app-name</p>
+            </div>
+          </a>
+          <a href="">
+            <div class="apps">
+              <img src="res/iamdifferent_channel.jpg" alt="">
+              <p>app-name</p>
+            </div>
+          </a>
+          <a href="">
+            <div class="apps">
+              <img src="res/iamdifferent_channel.jpg" alt="">
+              <p>app-name</p>
+            </div>
+          </a>
+          <a href="">
+            <div class="apps">
+              <img src="res/iamdifferent_channel.jpg" alt="">
+              <p>app-name</p>
+            </div>
+          </a>
+          <a href="">
+            <div class="apps">
+              <img src="res/iamdifferent_channel.jpg" alt="">
+              <p>app-name</p>
+            </div>
+          </a>
+          <a href="">
+            <div class="apps">
+              <img src="res/iamdifferent_channel.jpg" alt="">
+              <p>app-name</p>
+            </div>
+          </a>
+          <a href="">
+            <div class="apps">
+              <img src="res/iamdifferent_channel.jpg" alt="">
+              <p>app-name</p>
+            </div>
+          </a>
+          <a href="">
+            <div class="apps">
+              <img src="res/iamdifferent_channel.jpg" alt="">
+              <p>app-name</p>
+            </div>
+          </a>
+          <a href="">
+            <div class="apps">
+              <img src="res/iamdifferent_channel.jpg" alt="">
+              <p>app-name</p>
+            </div>
+          </a>
+          <a href="">
+            <div class="apps">
+              <img src="res/iamdifferent_channel.jpg" alt="">
+              <p>app-name</p>
+            </div>
+          </a>
+          <a href="">
+            <div class="apps">
+              <img src="res/iamdifferent_channel.jpg" alt="">
+              <p>app-name</p>
+            </div>
+          </a>
+          <a href="">
+            <div class="apps">
+              <img src="res/iamdifferent_channel.jpg" alt="">
+              <p>app-name</p>
+            </div>
+          </a>
+          <a href="">
+            <div class="apps">
+              <img src="res/iamdifferent_channel.jpg" alt="">
+              <p>app-name</p>
+            </div>
+          </a>
+          <a href="">
+            <div class="apps">
+              <img src="res/iamdifferent_channel.jpg" alt="">
+              <p>app-name</p>
+            </div>
+          </a>
+          <a href="">
+            <div class="apps">
+              <img src="res/iamdifferent_channel.jpg" alt="">
+              <p>app-name</p>
+            </div>
+          </a>
+          <a href="">
+            <div class="apps">
+              <img src="res/iamdifferent_channel.jpg" alt="">
+              <p>app-name</p>
+            </div>
+          </a>
+          <a href="">
+            <div class="apps">
+              <img src="res/iamdifferent_channel.jpg" alt="">
+              <p>app-name</p>
+            </div>
+          </a>
+          <a href="">
+            <div class="apps">
+              <img src="res/iamdifferent_channel.jpg" alt="">
+              <p>app-name</p>
+            </div>
+          </a>
+          <a href="">
+            <div class="apps">
+              <img src="res/iamdifferent_channel.jpg" alt="">
+              <p>app-name</p>
+            </div>
+          </a>
+          <a href="">
+            <div class="apps">
+              <img src="res/iamdifferent_channel.jpg" alt="">
+              <p>app-name</p>
+            </div>
+          </a>
+          <a href="">
+            <div class="apps">
+              <img src="res/iamdifferent_channel.jpg" alt="">
+              <p>app-name</p>
+            </div>
+          </a>
+        </div>
+        
       </div>
       <div class="profile-pic-container">
-        <img class="profile-pic" src="res/iamdifferent_channel.jpg"> 
+        <button class="profile-pic-btn"><img class="profile-pic" src="res/iamdifferent_channel.jpg"> 
+        </button>
         <div class="manage-account">
           <div class="big-profile-pic-container">
            <img class="big-profile-pic" src="res/iamdifferent_channel.jpg">
@@ -419,15 +619,18 @@ main .lang-div a
 
  </body>
  <script>
+   let is_manage_account_vis=false;
   document.getElementById("search-button").onclick = function(){
     let q = document.getElementById("search-bar").value;
     if(q!="")
     location.href="https://www.google.com/search?q="+q;
   }
+
   document.getElementById("search-clear").onclick = function(){
     document.getElementById("search-bar").value=null;
   }
-  
+
+ 
 
 // i left here
   // document.getElementById("search-bar").onclick=function(){
